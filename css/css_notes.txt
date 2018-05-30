@@ -1,0 +1,10 @@
+
+//Here's how to add a line for seperation before an element. Footer example here
+ footer::before {
+    background-color: #47a;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    margin: 0 0 13px;
+    width: 400px;
+}

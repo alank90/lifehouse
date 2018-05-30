@@ -1,0 +1,242 @@
+/* HTML5 Browser reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+    font-family: 'Volkhov', serif;
+    background-color: fff;
+}
+
+h1  {
+    
+    font-size: 64px;
+    line-height: 73px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+h3  {
+    font-size: 28px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+h5  {
+    font-weight:600;
+}
+
+.container aside  {
+    float:right;
+    margin-top: 160px ;
+    padding: 24px 10px;
+    width:30%;
+}
+
+.container p  {
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 5px;
+    padding-right: 60px;
+    font-family: 'Volkhov', serif;
+    font-weight: 400;
+    font-size: 17px;
+    font-style: normal;
+    line-height: 26px;
+    margin-right: 50px;
+    text-indent: 50px;
+}
+
+ .container .intro  {
+    font-family: 'Volkhov', serif;
+    font-size: 21px;
+    line-height: 28px;
+    font-style:normal;
+    font-weight: 400;
+}
+
+/*Note also that since pseudo-elements are not simple selectors, they are not a valid argument to :not(). So we had to do the not first paragraph this way.*/
+ .container p:first-child {
+    text-indent: 0px;
+}
+
+.container p:first-child:first-letter {
+    font-size:2.5em;
+    line-height: 1em;
+}
+
+a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+
+blockquote {
+  font-family: 'Volkhov', serif;
+  background: #f9f9f9;
+  border-left: 10px solid #554c4c;
+  margin: 1.5em 50px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content:open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+/* Styles for Slider */
+
+.hideable {
+    display: none;
+}
+
+.ss_container  {
+    float:left;
+    width: 60vw;
+    margin: 8px;
+    margin-top: 110px;
+    overflow: hidden;
+}
+
+.ss_container ul>img  {
+  position: relative;
+  margin: auto;
+}
+
+
+img:not(.arrow) {
+	width: 100%;
+	height:  auto;
+    border-radius: 2%;
+}
+
+img.centered {
+   display: block;
+   margin: auto;
+ }
+
+figcaption  {
+    margin-top: 5px;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: 900;
+    text-align: center;
+}
+ 
+#next_arrow  {
+	display: block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+    transition: all .8s ease-in;
+}
+
+#next_arrow:hover  {
+   opacity: .7;
+   transform: scale(1.3) rotate(360deg);
+}
+
+#prev_arrow  {
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    margin-left: 30px;
+    background: #fff;
+    border-radius: 50px;
+    transition: all .8s ease-in;
+}
+
+#prev_arrow:hover  {
+    opacity: .7;
+    transform: scale(1.3) rotate(360deg);
+}
+
+/* End of Slider Styling */
+
+
+footer {
+    clear:both;
+    font-family: 'Volkhov', serif;
+    margin-left: 100px;
+}
+
+footer::before {
+    background-color: #215a93;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    margin: 25px 0 5px -95px;
+    width: 400px;
+    
+}
+
+footer ul:first-of-type  {
+   margin-bottom: 25px ;
+}
+
+footer ul {
+    font-size: 18px;
+    margin-top: 16px;
+    list-style-type: none;
+    
+}
+
+
+
+footer h4  {
+    margin-top: 25px;
+    font-size:22px;
+    font-weight: 700;
+    margin-left: 150px;
+}
+
+

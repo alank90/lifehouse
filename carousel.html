@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style_carousel.css">
+    <meta charset="UTF-8">
+    <title>Carousel Page</title>
+</head>
+
+<body>
+    <!-- --------------------------
+   Markup for the Carousel Slider
+  -------------------------------->
+    
+<div class="ss_container"> 
+    <img id="prev_arrow" class="arrow" src="images/prev.png" alt="previous arrow"> 
+    <ul>
+        <li id="1" class="hideable" style="display: block;"><img src="images/wontgetfooledagain.jpg"></li>
+        <li id="2" class="hideable"><img src="images/lifehouse.jpg"></li>
+        <li id="3" class="hideable"><img src="images/lifehouse_backcover.jpg"></li>
+        <!-- ... and so on -->
+    </ul>
+    <img id="next_arrow" class="arrow" src="images/next.png" alt="next arrow">
+    <pre>
+<div>
+ 
+ 
+<!-- -------------------------------
+   Javascript for the Slide Carousel
+ ------------------------------------>
+ <script>
+	
+	/* Set Slideshow Interval
+    var interval = 1500; // You can change this value to your desired speed. 
+    var switching = setInterval("toggleSlide(true)", interval);  */
+    direction = null; // boolean value: true or false. If true, go to NEXT slide; otherwise go to PREV slide
+    
+   // Event Listener for Back/Forward buttons. Have to use a for loop because arrow is an array because 
+   // of multiple instances on the page.
+        var arrow = document.getElementsByClassName("arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", function() {
+            var arrowClicked = this.id;
+            if (arrowClicked == "next_arrow") {
+              direction = true;
+              toggleSlide(direction);
+            } else  {
+               direction = false;
+               toggleSlide(direction);
+            }
+           });  // End EventListener
+          } // End for loop
+       
+    function toggleSlide(direction) {
+        var elements = document.getElementsByClassName("hideable"); // gets all the "slides" in our slideshow
+        // Find the LI that's currently displayed
+        var visibleID = getVisible(elements);
+        // elements[visibleID].setAttribute("id", "fade_in");
+        elements[visibleID].style.display = "none"; // hide the currently visible LI
+        if (!direction) {
+            var makeVisible = prev(visibleID, elements.length); // get the previous slide
+        } else {
+            var makeVisible = next(visibleID, elements.length); // get the next slide
+        }
+        elements[makeVisible].style.display = "block"; // show the previous or next slide
+        // document.getElementById("fade_in").remove();
+        // elements[visibleID].style.opacity = "1";
+    }
+
+    function getVisible(elements) {
+        var visibleID = -1;
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].style.display == "block") {
+                visibleID = i;
+            }
+        }
+        return visibleID;
+    }
+
+    function prev(num, arrayLength) {
+        if (num == 0) return arrayLength - 1;
+        else return num - 1;
+    }
+
+    function next(num, arrayLength) {
+        if (num == arrayLength - 1) return 0;
+        else return num + 1;
+    }
+</script>
+ 
+
+</body>
+</html>

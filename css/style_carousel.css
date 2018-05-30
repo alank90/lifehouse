@@ -1,0 +1,53 @@
+
+
+.hideable {
+    display: none;
+}
+ 
+.ss_container ul  {
+    list-style-type: none;
+    margin-left: -2em;
+    max-width: 650px;
+    max-height: 650px;
+    overflow: hidden;
+}
+
+.ss_container  {
+    position: relative;
+}
+
+#next_arrow  {
+    position: absolute;
+    top: 450px;
+    margin-left: 580px;
+    background: #fff;
+    border-radius: 50px;
+    
+}
+
+#next_arrow:hover  {
+   opacity: .7;
+}
+
+#prev_arrow  {
+    position: absolute;
+    top: 450px;
+    margin-left: 30px;
+    background: #fff;
+    border-radius: 50px;
+}
+
+#prev_arrow:hover  {
+    opacity: .7;
+}
+
+li  {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+li #fade-in  {
+	opacity: 0;
+}
